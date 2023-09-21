@@ -5,10 +5,236 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YouTube Clone</title>
     <link rel="stylesheet" href="./CSS/app.css">
+    <link rel="shortcut icon" href="/img/icons8-youtube-100.svg" type="image/x-icon">
 </head>
 <body>
-    <div class="container">
+    <!--  -->
+    <div class="container"> <!--MAIN CONTAINER ELEMENT  -->
+        <header class="header"> <!-- CONTAINER ELEMENT FOR SITE TITLE & LEFT-NAV  -->
+            <div class="site-title-wrapper"><!-- SITE TITLE WRAPPER  -->
+                <img class="icon icon_bg" src="/img/icons8-menu-52.png" alt="hamburger icon">
+                <img class="site-title-icon" src="/img/youtubelogo-title.svg" alt="">
+            </div>
+            <nav class="left-nav"><!-- LEFT-NAV CONTAINER ELEMENT FOR NAV-components, UL AND LI ELEMENTS -->
+                <div class="nav-component"><!--NAV-components container, HOME-COMPONENT -->
+                    <ul>
+                        <li class="nav-li-link"><!--li- element for nav-icons and paragarghs(inline-flex-container)-->
+                            <img class="icon left-nav-icon" src="/img/icons8-twitter-home-48.png" alt="home icon" title="home"><p>Home</p>
+                        </li>
 
+                        <li class="nav-li-link"><!--li- element for nav-icons and paragarghs(inline-flex-container)-->
+                            <img class="icon left-nav-icon" src="/img/youtube-shorts-logo-15252.png" alt="youtube shorts icon" title="short"><p>Shorts</p>
+                        </li>
+    
+                        <li class="nav-li-link"><!--li- element for nav-icons and paragarghs(inline-flex-container)-->
+                            <img class="icon left-nav-icon" src="/img/youtube-videos-7639.png" alt="Subscriptions icon" title="Subscriptions"><p>Subscriptions</p>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="line"></div> <!--divider line -->
+
+                <div class="nav-component"><!--NAV-components container, LIBRARY-COMPONENT -->
+                    <ul>
+                        <li class="nav-li-link"><!--li- element for nav-icons and paragarghs(inline-flex-container)-->
+                            <img class="icon left-nav-icon" src="/img/video-973.png" alt="library icon" title="library"><p>Library</p>
+                        </li>
+
+                        <li class="nav-li-link"><!--li- element for nav-icons and paragarghs(inline-flex-container)-->
+                            <img class="icon left-nav-icon" src="/img/watch-later-64.png" alt="History icon" title="history"><p>History</p>
+                        </li>
+    
+                        <li class="nav-li-link"><!--li- element for nav-icons and paragarghs(inline-flex-container)-->
+                            <img class="icon left-nav-icon" src="/img/youtube-videos-7639.png" alt="Video icon" title="your videos"><p>Your Videos</p>
+                        </li>
+                        
+                        <li class="nav-li-link"><!--li- element for nav-icons and paragarghs(inline-flex-container)-->
+                            <img class="icon left-nav-icon" src="/img/icons8-clock-arrow-64.png" alt="clock icon" title="watch later"><p>Watch Later</p>
+                        </li>
+
+                        <li class="nav-li-link"><!--li- element for nav-icons and paragarghs(inline-flex-container)-->
+                            <img class="icon left-nav-icon" src="/img/icons8-facebook-like-64.png" alt="like icon" title="liked videos"><p>Liked Videos</p>
+                        </li>
+    
+                        <li class="nav-li-link"><!--li- element for nav-icons and paragarghs(inline-flex-container)-->
+                            <img class="icon left-nav-icon" src="/img/arrow-down-64.png" alt="arrow icon" title="Show more"><p>Show more</p>
+                        </li>
+                    </ul> 
+                </div>
+
+                <div class="line"></div> <!--divider line -->
+                
+                <div class="nav-component"><!--NAV-components container, SUBCRIPTION-COMPONENT -->
+                    <p class="sub-title">Subscriptions</p>
+                    <div class="nav-component"><!--NAV-components container, HOME-COMPONENT -->
+                        <ul>
+                            <li class="nav-li-link chanel_container"><!--li- element for nav-icons and paragarghs(inline-flex-container)-->
+                                <img class="left-nav-icon sub-channel-img" src="/img/Citrus background.jpg" alt="home icon" title="home"> <!--channel profile image-->
+                                <p>Citrus groove pandem</p>
+                                <img class="icon live-icon" src="/img/live-32.png" alt=""><!--live icon -->
+                            </li>
+                            
+                            <li class="nav-li-link chanel_container"><!--li- element for nav-icons and paragarghs(inline-flex-container)-->
+                                <img class="left-nav-icon sub-channel-img" src="/img/pexels-ketut-subiyanto-4349842.jpg" alt="home icon" title="home"> <!--channel profile image-->
+                                <p>Cut</p>
+                                <img class="icon live-icon" src="/img/live-32.png" alt=""><!--live icon -->
+                            </li>
+
+                            <li class="nav-li-link chanel_container"><!--li- element for nav-icons and paragarghs(inline-flex-container)-->
+                                <img class="left-nav-icon sub-channel-img" src="/img/pexels-christina-morillo-1181496.jpg" alt="home icon" title="home"> <!--channel profile image-->
+                                <p>Sony Studios</p>
+                                <img class="icon live-icon" src="/img/live-32.png" alt=""><!--live icon -->
+                            </li>
+
+                            <li class="nav-li-link chanel_container"><!--li- element for nav-icons and paragarghs(inline-flex-container)-->
+                                <img class="left-nav-icon sub-channel-img" src="/img/pexels-anna-shvets-5069393.jpg" alt="home icon" title="home"> <!--channel profile image-->
+                                <p>TheRadBrad</p>
+                                <img class="icon live-icon" src="/img/live-32.png" alt=""><!--live icon -->
+                            </li>
+
+                            <li class="nav-li-link chanel_container"><!--li- element for nav-icons and paragarghs(inline-flex-container)-->
+                                <img class="left-nav-icon sub-channel-img" src="/img/pexels-caio-mantovani-16121005.jpg" alt="home icon" title="home"> <!--channel profile image-->
+                                <p>Neso Academy</p>
+                                <img class="icon live-icon" src="/img/live-32.png" alt=""><!--live icon -->
+                            </li>
+
+                            <li class="nav-li-link"><!--li- element for nav-icons and paragarghs(inline-flex-container)-->
+                                <img class="icon left-nav-icon" src="/img/arrow-down-64.png" alt="arrow icon" title="Show more"><p>Show more</p>
+                            </li>
+                            </li>
+                        </ul>
+                </div>
+
+                <div class="line"></div> <!--divider line -->
+
+                <div class="nav-component"><!--NAV-components container, EXPLORE-COMPONENT -->
+                    <p class="sub-title">Explore</p>
+                    <ul>
+                        <li class="nav-li-link"><!--li- element for nav-icons and paragarghs(inline-flex-container)-->
+                            <img class="icon left-nav-icon" src="/img/fire-64.png" alt="flame icon" title="Trending"><p>Trending</p>
+                        </li>
+
+                        <li class="nav-li-link"><!--li- element for nav-icons and paragarghs(inline-flex-container)-->
+                            <img class="icon left-nav-icon" src="/img/youtube-shorts-logo-15252.png" alt="music-note icon" title="Music"><p>Music</p>
+                        </li>
+    
+                        <li class="nav-li-link"><!--li- element for nav-icons and paragarghs(inline-flex-container)-->
+                            <img class="icon left-nav-icon" src="/img/game-64.svg" alt="gamepad icon" title="Gamming"><p>Gaming</p>
+                        </li>
+
+                        <li class="nav-li-link"><!--li- element for nav-icons and paragarghs(inline-flex-container)-->
+                            <img class="icon left-nav-icon" src="/img/news-64.png" alt="news icon" title="News"><p>News</p>
+                        </li>
+
+                        <li class="nav-li-link"><!--li- element for nav-icons and paragarghs(inline-flex-container)-->
+                            <img class="icon left-nav-icon" src="/img/trophy-64.png" alt="trophy icon" title="Sport"><p>Sport</p>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <div class="line"></div> <!--divider line -->
+
+                <div class="nav-component"><!--NAV-components container, MORE_FROM_YOUTUBE-COMPONENT -->
+                    <p class="sub-title">More from YouTube</p>
+                    <ul>
+                        <li class="nav-li-link"><!--li- element for nav-icons and paragarghs(inline-flex-container)-->
+                            <img class="icon left-nav-icon" src="/img/youtube-premium-subscription.png" alt="youtube icon" ><p>Youtube Premium</p>
+                        </li>
+
+                        <li class="nav-li-link"><!--li- element for nav-icons and paragarghs(inline-flex-container)-->
+                            <img class="icon left-nav-icon" src="/img/youtubestudio-hexagon-red-logo-64.png" alt="youtube icon"><p>Youtube Studio</p>
+                        </li>
+    
+                        <li class="nav-li-link"><!--li- element for nav-icons and paragarghs(inline-flex-container)-->
+                            <img class="icon left-nav-icon" src="/img/youtube-music-64.png" alt="youtube icon" ><p>Youtube Music</p>
+                        </li>
+
+                        <li class="nav-li-link"><!--li- element for nav-icons and paragarghs(inline-flex-container)-->
+                            <img class="icon left-nav-icon" src="/img/youtubekids-red-logo-62.png" alt="news icon" title="News"><p>Youtube Kids</p>
+                        </li>
+            
+                    </ul>
+                </div>
+
+                <div class="line"></div> <!--divider line -->
+
+                <div class="nav-component"> <!--NAV-components container, SETTINGS-COMPONENT -->
+                    <ul>
+                        <li class="nav-li-link"><!--li- element for nav-icons and paragarghs(inline-flex-container)-->
+                            <img class="icon left-nav-icon" src="/img/settings-5672.png" alt="Settings icon" ><p>Settings</p>
+                        </li>
+
+                        <li class="nav-li-link"><!--li- element for nav-icons and paragarghs(inline-flex-container)-->
+                            <img class="icon left-nav-icon" src="/img/start-flag-64.png" alt="report icon"><p>Report history</p>
+                        </li>
+    
+                        <li class="nav-li-link"><!--li- element for nav-icons and paragarghs(inline-flex-container)-->
+                            <img class="icon left-nav-icon" src="/img/help-64.png" alt="help icon" ><p>Help</p>
+                        </li>
+
+                        <li class="nav-li-link"><!--li- element for nav-icons and paragarghs(inline-flex-container)-->
+                            <img class="icon left-nav-icon" src="/img/report-64.png" alt="feedback icon"><p>Send feedback</p>
+                        </li>
+            
+                    </ul>
+                </div>
+
+                <div class="line"></div> <!--divider line -->
+
+                <footer class="nav-component"> <!--NAV-components container, FOOTER-COMPONENT -->
+                    <p class="footer-links">
+                        <a href="#">About</a>
+                        <a href="#">Press</a>
+                        <a href="#">Copyright</a>
+                        <a href="#">Contactus</a>
+                        <a href="#">Creators</a>
+                        <a href="#">Advertise</a>
+                        <a href="#">Developers</a>
+                    </p>
+                    <p class="footer-links">
+                        <a href="#">Terms</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Safety</a>
+                        <a href="#">How YouTube works</a>
+                        <a href="#">Test new features</a>
+                    </p>
+                </footer>
+            </nav>
+        </header>
+
+        <main class="main">
+            <section class="main_section_header">
+                <form class="form" action="#" method="get" >
+                    <input type="search" name="search" id="search" placeholder="Search">
+                    <button class="search-btn" type="submit"><img class="icon" src="/img/icons8-search-52.svg" alt="search icon"></button>
+                    <img class="icon" src="/img/icons8-microphone-52.png" alt="mic icon">
+                </form>
+                <div class="user_actions">
+                    <img class="icon" src="/img/icons8-videocam-52.png" alt="add-video icon">
+                    <img class="icon" src="/img/icons8-notification-64.png" alt="notificaion icon">
+                    <img class="icon c" src="/img//Snapchat-1081058616.jpg" alt="user_profile picture">
+                </div>
+            </section>
+
+            <section class="right-nav">
+                <div class="right-nav-links btn">links</div>
+                <div class="right-nav-links wide">links</div>
+                <div class="right-nav-links">links</div>
+                <div class="right-nav-links">links</div>
+                <div class="right-nav-links wide">links</div>
+                <div class="right-nav-links">links</div>
+                <div class="right-nav-links wide">links</div>
+                <!-- <div class="right-nav-links">links</div> -->
+                <!-- <div class="right-nav-links">links</div> -->
+                <div class="right-nav-links wide">links</div>
+            </section>
+            
+            <section class="video_grid">
+
+            </section>
+        </main>
     </div>
 </body>
 </html>
