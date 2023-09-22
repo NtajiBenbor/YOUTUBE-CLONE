@@ -9,7 +9,7 @@ html {
 
 :root {
     --primary-color: #111111;
-    --secondary-color: #f8f8f8;
+    --secondary-color: #b9b9b9;
     --hover-color: #2f2f2f;
     --button-color: #2c2c2c;
     --btn-hover-color: #535353;
@@ -18,13 +18,15 @@ html {
 
 body {
     width: 100%;
+    /* min-width: 890px; */
     height: 100%;
     padding: 0;
     margin: 0;
     font-size: var(--body-font-size);
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 }
 
 img {
@@ -54,6 +56,16 @@ img {
 
 }
 
+.video_profile_pic:hover {
+    background-color: unset;
+}
+
+.grid-item {
+    cursor: pointer;
+}
+
+
+
 .icon_bg { /* hamburger menu style*/
     border-radius: 50%;
 }
@@ -70,20 +82,33 @@ ul { /* NAV LIST STYLES */
 
 /* TYPOGRAPHY STYLES */
 
-.sub-title {
+.sub-title,
+.matadata  {
     font-size: 1.5rem;
 }
 
 .nav-li-link > p, 
 .nav-component p,
 a,
-.right-nav-links {
+.right-nav-links,
+.sub-title {
     font-weight: 700;
 }
 
 a {
     color: #818181;
     text-decoration: none;
+}
+
+.matadata-wrapper .sub-title {
+    font-size: 1.6rem;
+}
+
+.matadata {
+    color: #818181;
+    font-weight: 500;
+    padding: 0;
+    margin: .2em;
 }
 
 /* GENERAL LAYOUT STYLES */
@@ -94,14 +119,13 @@ a {
     display: flex;
     margin: 0 auto;
     position: relative;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 
 
 }
 
 .header { /*header element that contains SITE-TITLE AND LEFT-NAV */
     width: 18%;
-    /* border: 2px solid white; */
     position: fixed;
     top: 0;
     background-color: inherit;
@@ -112,19 +136,38 @@ a {
     flex-direction: column;
     position: sticky;
     overflow-y:hidden;
-    height: 100vh;
+    height: 92vh;
     z-index: -1;
-    top: -180px;
+    overflow-x: hidden;
     
+}
+
+
+
+*::-webkit-scrollbar {
+    width: .6em;
+    height: 100px;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: #111111;
+}
+
+*::-webkit-scrollbar-thumb {
+   background: var(--btn-hover-color);
+   border-radius: 20px;
 }
 
 .left-nav:hover {
     overflow-y: scroll;
+    overflow-x: hidden;
+    
+
+    
 }
 
 .main { /*container element for SEARCH BAR, RIGHT-NAV, VIDEO GRID */
     width: 81%;
-    /* border: 5px solid red; */
     position: relative;
     margin-left: auto;
     height: 100vh;
@@ -134,7 +177,6 @@ a {
 
 .left-nav-icon { /*styles for NAV icon */
     margin-right: 2.3em; 
-    /* border: 1px solid gold; */
     width: 30px;
     height: 30px;
     transform: translateY(3px) scale(.9);
@@ -145,9 +187,7 @@ a {
     justify-content: flex-start;
     position: sticky;
     height: 50px;
-    /* border: 2px solid blue; */
     top: 0;
-    /* width: 100%; */
 
 }
 
@@ -156,7 +196,6 @@ a {
     width: 180px;
     height: 24px;
     transform: translate(-10px, 8px);
-    /* border: 1px solid gold; */
     cursor: pointer;
 
 }
@@ -165,6 +204,7 @@ a {
 .nav-component { /*NAV-components container*/
     width: 98%;
     margin: 0 auto;
+    margin-bottom: .5em;
 }
 
 .nav-li-link { /*li- element for nav-icons and paragarghs(inline-flex-container)*/
@@ -177,10 +217,12 @@ a {
 }
 
 .line { /* divider line */
-    width: 95%;
-    height: .1em;
-    background-color: var(--button-color);
-    margin: 0 auto;
+    width: 95% !important;
+    /* height: .1em !important; */
+    background-color: var(--button-color) !important;
+    margin: 0 auto !important;
+    padding: .1em;
+    
 }
 
 /* subcription component styles */
@@ -190,9 +232,10 @@ a {
     height: 25px;
     position: relative;
     top: 5px;
+    left: 80px;
+    
 }
 .chanel_container { /*individual Channel container */
- justify-content: space-around;
  width: 100%;
  position: relative;
  margin-bottom: 1em;
@@ -215,8 +258,8 @@ a {
 }
 
 .footer-links {
-    width: 75%;
-    margin: .5em auto;
+    width: 70%;
+    margin: .5em 0;
 }
 
 
@@ -224,16 +267,15 @@ a {
 .main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 50px 50px 100%;
-    /* padding-left: 1em; */
-    position: relative;
+    grid-template-rows: 50px 50px 1fr;
+    position: sticky;
+    top: 0;
     background-color: var(--primary-color);
    
 
 }
 
 .main_section_header { /* container for user actions and and form */
-   /* border: 2px solid orange;  */
    grid-column: 1 / -1;
    display: flex;
    position: sticky;
@@ -244,7 +286,6 @@ a {
 
 .user_actions { /* flex container for add vieo icon user profile pic and notifications */
     display: flex;
-    /* outline: 2px solid green; */
     width: 30%;
     justify-content: flex-end;
     padding-top: .5em;
@@ -252,7 +293,6 @@ a {
 }
 
 .user_actions img { /* add video icon user profile pic and notifications */
-    /* align-self: center; */
     margin-right: 1.5em;
     border-radius: 50%;
     padding: .7em;
@@ -278,7 +318,6 @@ a {
     border: none;
     outline: none;
     background-color: var(--primary-color);
-    /* align-self: center; */
     margin-left: 8em;
     border: 1px solid var(--button-color);
     padding-left: 3.5em;
@@ -289,7 +328,6 @@ a {
     border-radius: 0 20px 20px 0;
     height: 80%;
     background-color: var(--primary-color);
-    /* align-self: center; */
     border: 1px solid var(--button-color);
 
 }
@@ -302,7 +340,6 @@ a {
 
 .search-btn + .icon { /* search bar microphone icon*/
     transform: scale(.9);
-    /* align-self: center; */
     margin-left: 2em;
     margin-top: 0;
     border-radius: 50%;
@@ -311,10 +348,9 @@ a {
 }
 
 .right-nav { /* container for horizontal scrollbar */
-    /* border: 2px solid blue;  */
     grid-column: 1 / -1;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(12, 1fr));
     grid-auto-rows: 28px;
     gap: 1em;
     grid-auto-flow: column;
@@ -333,7 +369,6 @@ a {
     background-color: var(--button-color);
     border-radius: 8px;
     padding: .5em;
-    /* align-items: center; */
     
 
 
@@ -344,11 +379,61 @@ a {
 }
 
 .video_grid { /* container for video feed */
-    border: 2px solid moccasin; 
     grid-column: 1 / -1;
+    grid-template-rows: -1;
+    /* padding-left: .5em; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-auto-flow: row;
+    grid-auto-rows: 320px;
+    gap: 1.5em .6em;
+
+
+   
+}
+
+.grid-item {
+    padding: .2em;
+    margin-bottom: 1.7em;
+   
 }
 
 
+
+.video-flex-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+}
+
+.video_thumbnail_container {
+    height: 70%;
+    
+}
+
+.video_thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.video_details_flex_container {
+    height: 30%;
+    display: flex;
+    align-items: center;
+    padding-top: .8em;
+    
+}
+
+.video_profile_pic {
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1em;
+
+}
 
 
 /* MEDIA QUREY STYLES */
