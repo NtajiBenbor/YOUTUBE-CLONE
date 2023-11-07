@@ -136,7 +136,7 @@ a {
     flex-direction: column;
     position: sticky;
     overflow-y:hidden;
-    height: 92vh;
+    height: 100vh;
     z-index: -1;
     overflow-x: hidden;
     
@@ -166,6 +166,46 @@ a {
     
 }
 
+@media screen and (max-width: 670px) {
+
+    .container {
+        justify-content: unset;
+        width: 100%;
+        margin: unset;
+    }
+    .header {
+        width: 12%;
+    }
+    
+    .main{
+        width: 88%;
+        margin: unset;
+    }
+
+    
+
+    .left-nav-icon  {
+        transform: translateX(100px);
+    }
+
+    .sub-title {
+        display: none;
+    }
+
+    .hidden {
+        display: none;
+     } 
+
+     .icon:hover, 
+    .left-nav-icon:hover,
+    .nav-li-link:hover,
+    .right-nav-links:hover,
+    .right-nav-links:hover {
+        cursor: pointer;
+        background-color: unset;
+    }
+}
+
 .main { /*container element for SEARCH BAR, RIGHT-NAV, VIDEO GRID */
     width: 81%;
     position: relative;
@@ -184,20 +224,39 @@ a {
 
 .site-title-wrapper { /*wrapper element for the site title */
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     position: sticky;
     height: 50px;
     top: 0;
+    bottom: 20px;
 
 }
 
 
 .site-title-icon { /*site title-icon styles  */
-    width: 180px;
+    /* flex: 1; */
     height: 24px;
     transform: translate(-10px, 8px);
     cursor: pointer;
 
+}
+
+
+
+@media (max-width: 810px) {
+    .container {
+        min-width: 500px;
+    }
+    .site-title-icon {
+        left: 30px;
+        position: absolute;
+        z-index: 3;
+        margin-left: 30px;
+    }
+
+    .site-title-wrapper {
+        overflow: hidden;
+    }
 }
 
 
@@ -235,6 +294,27 @@ a {
     left: 80px;
     
 }
+
+
+
+@media (max-width: 1242px) {
+
+    .live-icon {
+        left: 20px; 
+    }
+    
+}
+
+@media (max-width: 887px) {
+
+    .live-icon {
+        left: 5px; 
+    }
+    
+}
+
+
+
 .chanel_container { /*individual Channel container */
  width: 100%;
  position: relative;
@@ -301,6 +381,7 @@ a {
 
 .user_actions img:last-of-type { /* user profile pic */
     padding: unset;
+    max-width: 100%;
     object-fit: cover;
     border-radius: 50%;
 }
@@ -347,6 +428,20 @@ a {
     background-color: var(--hover-color);
 }
 
+@media (max-width: 810px) {
+    .search-btn + .icon {
+        transform: translateX(-35px);
+    }
+
+    .search-btn {
+        transform: translateX(-30px);
+    }
+
+    .right-nav-links {
+        font-size: 1em;
+    }
+}
+
 .right-nav { /* container for horizontal scrollbar */
     grid-column: 1 / -1;
     display: grid;
@@ -372,6 +467,14 @@ a {
     
 
 
+}
+
+
+@media (max-width: 810px) {
+    .right-nav-links {
+        font-size: .8em;
+        padding: .2em;
+    }
 }
 
 .wide {
