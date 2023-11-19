@@ -1,4 +1,4 @@
-# A Youtube Clone Built With HTML and CSS
+# A YouTube clone Built With HTML and CSS
 
 ## Content :link:
 
